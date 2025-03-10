@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Cadastros</h1>
+
+        <!-- Cadastro de Pessoa Física -->
+        <section>
+            <h2>Cadastro de Pessoa Física</h2>
+            <form id="cadastroPF">
+                <div class="form-group">
+                    <label for="nomePF">Nome:</label>
+                    <input type="text" id="nomePF" name="nomePF" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpfPF">CPF:</label>
+                    <input type="text" id="cpfPF" name="cpfPF" required>
+                    <span class="error-message" id="cpfPFError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="enderecoPF">Endereço:</label>
+                    <input type="text" id="enderecoPF" name="enderecoPF" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="limparFormulario('cadastroPF')">Cancelar</button>
+                </div>
+            </form>
+            <div id="mensagemSucessoPF" class="success-message"></div>
+        </section>
+
+        <!-- Cadastro de Pessoa Jurídica -->
+        <section>
+            <h2>Cadastro de Pessoa Jurídica</h2>
+            <form id="cadastroPJ">
+                <div class="form-group">
+                    <label for="cnpjPJ">CNPJ:</label>
+                    <input type="text" id="cnpjPJ" name="cnpjPJ" required>
+                    <span class="error-message" id="cnpjPJError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="razaoSocialPJ">Razão Social:</label>
+                    <input type="text" id="razaoSocialPJ" name="razaoSocialPJ" required>
+                </div>
+                <div class="form-group">
+                    <label for="enderecoPJ">Endereço:</label>
+                    <input type="text" id="enderecoPJ" name="enderecoPJ" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="limparFormulario('cadastroPJ')">Cancelar</button>
+                </div>
+            </form>
+            <div id="mensagemSucessoPJ" class="success-message"></div>
+        </section>
+
+        <!-- Cadastro de Professores -->
+        <section>
+            <h2>Cadastro de Professores</h2>
+            <form id="cadastroProfessor">
+                <div class="form-group">
+                    <label for="nomeProfessor">Nome:</label>
+                    <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpfProfessor">CPF:</label>
+                    <input type="text" id="cpfProfessor" name="cpfProfessor" required>
+                    <span class="error-message" id="cpfProfessorError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="departamentoProfessor">Departamento:</label>
+                    <input type="text" id="departamentoProfessor" name="departamentoProfessor" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulacaoProfessor">Titulação:</label>
+                    <input type="text" id="titulacaoProfessor" name="titulacaoProfessor" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="limparFormulario('cadastroProfessor')">Cancelar</button>
+                </div>
+            </form>
+            <div id="mensagemSucessoProfessor" class="success-message"></div>
+        </section>
+
+        <!-- Cadastro de Fornecedores -->
+        <section>
+            <h2>Cadastro de Fornecedores</h2>
+            <form id="cadastroFornecedor">
+                <div class="form-group">
+                    <label for="cnpjFornecedor">CNPJ:</label>
+                    <input type="text" id="cnpjFornecedor" name="cnpjFornecedor" required>
+                    <span class="error-message" id="cnpjFornecedorError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="razaoSocialFornecedor">Razão Social:</label>
+                    <input type="text" id="razaoSocialFornecedor" name="razaoSocialFornecedor" required>
+                </div>
+                <div class="form-group">
+                    <label for="areaAtuacaoFornecedor">Área de Atuação:</label>
+                    <input type="text" id="areaAtuacaoFornecedor" name="areaAtuacaoFornecedor" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="limparFormulario('cadastroFornecedor')">Cancelar</button>
+                </div>
+            </form>
+            <div id="mensagemSucessoFornecedor" class="success-message"></div>
+        </section>
+
+        <!-- Cadastro de Alunos -->
+        <section>
+            <h2>Cadastro de Alunos</h2>
+            <form id="cadastroAluno">
+                <div class="form-group">
+                    <label for="nomeAluno">Nome:</label>
+                    <input type="text" id="nomeAluno" name="nomeAluno" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpfAluno">CPF:</label>
+                    <input type="text" id="cpfAluno" name="cpfAluno" required>
+                    <span class="error-message" id="cpfAlunoError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cursoAluno">Curso:</label>
+                    <input type="text" id="cursoAluno" name="cursoAluno" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                    <button type="button" onclick="limparFormulario('cadastroAluno')">Cancelar</button>
+                </div>
+            </form>
+            <div id="mensagemSucessoAluno" class="success-message"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
